@@ -1,0 +1,118 @@
+/* Style dla banera */
+.banner {
+    width: 100vw;
+    min-height: 180px;
+    max-height: 350px;
+    height: 28vw;
+    background-color: #f0f0f0;
+    background-image: url('../images/logo/logo2.png'); /* ścieżka względna do pliku logo2.png */
+    background-size: cover;
+    background-position: center 55%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 calc(-50vw + 50%);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style dla nawigacji */
+.main-nav {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+    padding: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: stretch; /* Rozciąga elementy na całą szerokość */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav li {
+    flex: 1; /* Każda zakładka zajmuje równą część przestrzeni */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 19px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    transition: brightness 0.3s;
+}
+
+/* Kolory dla poszczególnych zakładek */
+.main-nav li:nth-child(1) a {
+    background-color: #71984c; /* czerwony */
+}
+
+.main-nav li:nth-child(2) a {
+    background-color: #1D7370; /* turkusowy */
+}
+
+.main-nav li:nth-child(3) a {
+    background-color: #B21F35; /* niebieski */
+}
+
+.main-nav li:nth-child(4) a {
+    background-color: #D7BE39; /* zielony */
+}
+
+/* Efekt hover */
+.main-nav a:hover {
+    filter: brightness(85%);
+}
+
+.main-nav a.active {
+    filter: brightness(85%);
+}
+
+@media (max-width: 600px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .main-nav ul {
+    flex-direction: column;
+  }
+  .main-nav a {
+    font-size: 17px;
+    padding: 12px 0;
+  }
+  .banner {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+    height: 25vw;
+    max-width: 100%;
+  }
+  .events-title h1 {
+    padding: 0.5em 1em !important;
+    font-size: 1.5rem !important;
+  }
+  /* Dostosuj inne elementy według potrzeb */
+}
